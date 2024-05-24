@@ -65,6 +65,7 @@ include "../includes/_signin.php";
             <img src="../images/signin.jpg" alt="shirt" class="h-full w-full object-cover">
         </div>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>
