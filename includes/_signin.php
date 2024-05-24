@@ -1,5 +1,5 @@
 <?php
-include "./partials/_dbconnect.php";
+include "partials/_dbconnect.php";
 
 $showError = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
