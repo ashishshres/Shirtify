@@ -51,7 +51,7 @@ include "../includes/_update_account.php";
 
     <div class="px-8 py-3">
         <form action="" method="post" enctype="multipart/form-data" class="flex flex-col gap-4 w-full md:w-full md:max-w-[467px]">
-            <div class="w-40 h-40 ">
+            <div class="w-40 h-40">
                 <img class="w-full h-full rounded-full object-cover" src="<?= $_SESSION["avatar"] ?>" alt="">
             </div>
             <div class="flex flex-col gap-1">
