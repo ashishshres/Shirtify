@@ -50,7 +50,10 @@ include "../includes/_update_account.php";
     ?>
 
     <div class="px-8 py-3">
-        <form action="" method="post" class="flex flex-col gap-4 w-full md:w-full md:max-w-[467px]">
+        <form action="" method="post" enctype="multipart/form-data" class="flex flex-col gap-4 w-full md:w-full md:max-w-[467px]">
+            <div class="w-40 h-40 ">
+                <img class="w-full h-full rounded-full object-cover" src="<?= $_SESSION["avatar"] ?>" alt="">
+            </div>
             <div class="flex flex-col gap-1">
                 <label for="username">Username</label>
                 <input type="text" value="<?= $_SESSION["username"] ?>" name="username" id="username" class="bg-zinc-200 p-2 rounded-md">
@@ -63,11 +66,22 @@ include "../includes/_update_account.php";
                 <label for="password">New Password</label>
                 <input type="password" name="password" id="password" class="bg-zinc-200 p-2 rounded-md">
             </div>
+            <div class="flex flex-col gap-1">
+                <label for="avatar">Avatar</label>
+                <input type="file" name="avatar" id="avatar" class="hidden" onchange="updateAvatar()" />
+                <button type="button" onclick="document.getElementById('avatar').click()" class="border border-zinc-800 px-4 py-2 rounded-md w-max">
+                    Choose File
+                </button>
+                <span id="file-chosen" class="mt-2 text-gray-600">
+                    Not Chosen
+                </span>
+            </div>
             <div class="flex flex-col gap-1 text-center">
                 <button type="submit" name="update" class="bg-zinc-800 text-white p-2 rounded-md hover:bg-zinc-700">Update Details</button>
             </div>
         </form>
     </div>
+    <script src="../scripts/files.js"></script>
     <script src="../scripts/main.js"></script>
 </body>
 
