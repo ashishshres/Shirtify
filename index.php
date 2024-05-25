@@ -21,11 +21,16 @@ include "./includes/_add_cart.php";
 </head>
 
 <body>
+    <?php
+    $originalPath = $_SESSION["avatar"];
+    $avatar = str_replace("../", "./", $originalPath);
+    ?>
+
     <div class="bg-gray-100 shadow-sm px-8 py-3 flex flex-wrap justify-between items-center">
         <div class="text-blue-700 text-3xl font-bold cursor-default">Shirtify.</div>
         <div class="flex flex-wrap gap-4 items-center w-full md:w-max">
             <a href="./pages/cart.php" class="font-medium hover:underline">Cart</a>
-            <a href="./pages/account.php" class="font-medium hover:underline">My Account</a>
+            <a href="./pages/account.php" class="font-medium hover:underline flex items-center gap-2">My Account <span class="inline-block h-8 w-8"><img class="h-full w-full object-cover rounded-full" src="<?= $avatar ?>" alt=""></span></a>
             <button type="submit" name="logout" onclick="window.location.href='./includes/_logout.php'" class="bg-zinc-800 text-white px-4 py-2 rounded-md hover:bg-zinc-700 w-full md:w-max">Logout</button>
         </div>
     </div>
