@@ -14,7 +14,7 @@ if (isset($_POST["update"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    if (isset($_FILES["avatar"])) {
+    if (isset($_FILES["avatar"]) && $_FILES["avatar"]["error"] == 0) {
         $filename = $_FILES["avatar"]["name"];
         $filesize = $_FILES["avatar"]["size"];
         $filetmp = $_FILES["avatar"]["tmp_name"];
