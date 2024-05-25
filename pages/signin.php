@@ -10,6 +10,7 @@ include "../includes/_signin.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in - Shirtify</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../images/favicon_io/favicon.ico" type="image/x-icon">
 </head>
 
 <body class="h-screen w-screen">
