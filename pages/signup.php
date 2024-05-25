@@ -34,7 +34,7 @@ include "../includes/_signup.php";
     ';
     }
 
-    if ($exists) {
+    if (isset($_GET['exists'])) {
         echo '<div class="transition duration-300 ease-in-out toast-signup fixed top-10 right-5 mx-2 max-w-xs bg-white border border-gray-200 rounded-xl shadow-lg " role="alert">
             <div class="flex p-4">
             <div class="flex-shrink-0">
