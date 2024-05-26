@@ -54,6 +54,10 @@ include "../includes/_signin.php";
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password" class="bg-zinc-200 p-2 rounded-md">
                         </div>
+                        <div class="flex gap-1">
+                            <input type="checkbox" name="show" id="show" class="bg-zinc-200 p-2 rounded-md" onclick="togglePassword()">
+                            <label for="show">Show Password</label>
+                        </div>
                         <div class="flex flex-col gap-1 text-center">
                             <button type="submit" name="signin" class="bg-zinc-800 text-white p-2 rounded-md hover:bg-zinc-700">Sign In</button>
                             <p>Don't have an account? <span class="font-medium hover:underline cursor-pointer" onclick="window.location.href = './signup.php'">Sign up</span></p>
