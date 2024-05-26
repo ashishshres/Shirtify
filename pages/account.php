@@ -67,6 +67,10 @@ include "../includes/_update_account.php";
                 <label for="password">New Password</label>
                 <input type="password" name="password" id="password" class="bg-zinc-200 p-2 rounded-md">
             </div>
+            <div class="flex gap-1">
+                <input type="checkbox" name="show" id="show" class="bg-zinc-200 p-2 rounded-md" onclick="togglePassword()">
+                <label for="show">Show Password</label>
+            </div>
             <div class="flex flex-col gap-1">
                 <label for="avatar">Avatar</label>
                 <input type="file" name="avatar" id="avatar" class="hidden" onchange="updateAvatar()" />
