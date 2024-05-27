@@ -55,3 +55,39 @@ function togglePassword() {
         });
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const decrementBtns = document.querySelectorAll("#decrement-button-4");
+    const incrementBtns = document.querySelectorAll("#increment-button-4");
+    const counterInputs = document.querySelectorAll("#counter-input-4");
+    console.log(decrementBtns);
+    decrementBtns.forEach((decrementButton) => {
+        decrementButton.addEventListener("click", function () {
+            counterInputs.forEach((counterInput) => {
+                let currentValue = parseInt(counterInput.value, 10);
+                if (!isNaN(currentValue) && currentValue > 1) {
+                    counterInput.value = currentValue - 1;
+                    counterInput.setAttribute("value", counterInput.value);
+                } else {
+                    counterInput.value = 1;
+                    counterInput.setAttribute("value", counterInput.value);
+                }
+            });
+        });
+    });
+
+    incrementBtns.forEach((incrementButton) => {
+        incrementButton.addEventListener("click", function (e) {
+            counterInputs.forEach((counterInput) => {
+                let currentValue = parseInt(counterInput.value, 10);
+                if (!isNaN(currentValue)) {
+                    counterInput.value = currentValue + 1;
+                    counterInput.setAttribute("value", counterInput.value);
+                } else {
+                    counterInput.value = 0;
+                    counterInput.setAttribute("value", counterInput.value);
+                }
+            });
+        });
+    });
+});
