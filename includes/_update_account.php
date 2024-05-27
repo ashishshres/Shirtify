@@ -14,6 +14,11 @@ if (isset($_POST["update"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
+    $updateProductTable = "UPDATE products SET added_by = '$username' WHERE added_by = '$currentUsername'";
+    $updateCartTable = "UPDATE cart SET added_by = '$username' WHERE added_by = '$currentUsername'";
+    mysqli_query($conn, $updateProductTable);
+    mysqli_query($conn, $updateCartTable);
+
     if (isset($_FILES["avatar"]) && $_FILES["avatar"]["error"] == 0) {
         $filename = $_FILES["avatar"]["name"];
         $filesize = $_FILES["avatar"]["size"];
