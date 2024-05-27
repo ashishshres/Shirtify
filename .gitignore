@@ -1,4 +1,3 @@
-uploads/*
-!uploads/.gitkeep
+
 includes/avatar/*
 !includes/avatar/avatar.jpg
