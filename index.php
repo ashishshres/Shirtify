@@ -9,6 +9,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true) {
 
 include "./includes/_add_cart.php";
 include "./includes/_cart_number.php";
+include "./includes/_product_page.php";
 ?>
 
 <!doctype html>
