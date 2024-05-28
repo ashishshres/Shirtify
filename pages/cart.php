@@ -17,7 +17,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart - Shirtify</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="../images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
