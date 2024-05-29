@@ -49,14 +49,27 @@ include "../includes/_update_product.php";
         <h1 class="px-8 py-5 text-xl font-bold">Update Product</h1>
     </div>
     <div class="px-8 py-3">
-        <form action="" method="post" class="flex flex-col gap-4 w-full md:w-full md:max-w-[467px]">
+        <form action="" method="post" enctype="multipart/form-data" class="flex flex-col gap-4 w-full md:w-full md:max-w-[467px]">
             <div class="flex flex-col gap-1">
                 <label for="productname">Product Name</label>
+                <input type="hidden" value="<?= $row['product_name'] ?>" name="currentname">
                 <input value="<?= $row['product_name'] ?>" type="text" name="productname" id="productname" class="bg-zinc-200 p-2 rounded-md">
             </div>
             <div class="flex flex-col gap-1">
                 <label for="productprice">Product Price</label>
+                <input type="hidden" value="<?= $row['product_price'] ?>" name="currentprice">
                 <input value="<?= $row['product_price'] ?>" type="number" name="productprice" id="productprice" class="bg-zinc-200 p-2 rounded-md">
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="product-image">Product Image</label>
+                <input type="hidden" value="<?= $row['image_path'] ?>" name="currentimage">
+                <input type="file" name="product-image" id="product-image" class="hidden" onchange="updateProductImage()" />
+                <button type="button" onclick="document.getElementById('product-image').click()" class="border border-zinc-800 px-4 py-2 rounded-md w-max">
+                    Choose File
+                </button>
+                <span id="file-chosen" class="mt-2 text-gray-600">
+                    Not Chosen
+                </span>
             </div>
             <div class="flex flex-col gap-1 text-center">
                 <button type="submit" name="update" class="bg-zinc-800 text-white p-2 rounded-md hover:bg-zinc-700">Update Product</button>
@@ -64,6 +77,7 @@ include "../includes/_update_product.php";
         </form>
     </div>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/files.js"></script>
 </body>
 
 </html>
