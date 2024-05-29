@@ -15,6 +15,9 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // fetch each row from the table
+    echo '<div class="mt-3 md:gap-6 lg:flex lg:items-start xl:gap-8">
+    <div class="w-full flex-none lg:max-w-2xl xl:max-w-4xl">
+        <div class="space-y-6 mb-4">';
     while ($row = mysqli_fetch_assoc($result)) {
         $productid = $row["id"];
         $productimage = $row["image_path"];
@@ -64,4 +67,9 @@ if (mysqli_num_rows($result) > 0) {
     </div>';
         $sn++;
     }
+    echo '</div></div>';
+} else {
+    echo '<div class="w-full">
+    <p class="text-center text-xl font-medium text-gray-800 ">No Products Added</p>
+</div>';
 }
