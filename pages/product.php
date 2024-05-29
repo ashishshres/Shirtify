@@ -64,17 +64,7 @@ include "../includes/_delete_product.php";
             <div class="p-1.5 min-w-full inline-block align-middle">
                 <div class="overflow-hidden">
                     <table class="min-w-full divide-y divide-gray-200 ">
-                        <thead>
-                            <tr>
-                                <th scope="col" class="px-4 py-3 text-start font-bold text-gray-800 uppercase">S.N.</th>
-                                <th scope="col" class="px-4 py-3 text-start font-bold text-gray-800 uppercase">Product Name</th>
-                                <th scope="col" class="px-4 py-3 text-start font-bold text-gray-800 uppercase">Product Price</th>
-                                <th scope="col" class="px-4 py-3 text-start font-bold text-gray-800 uppercase">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php include "../includes/_added_product.php" ?>
-                        </tbody>
+                        <?php include "../includes/_added_product.php" ?>
                     </table>
                 </div>
             </div>
