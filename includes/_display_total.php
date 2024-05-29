@@ -16,6 +16,7 @@ $totalAmount = 0;
 $deliveryFee = number_format(100, 2);
 
 if (mysqli_num_rows($result) > 0) {
+    echo '<div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">';
     // fetch each row from the table
     while ($row = mysqli_fetch_assoc($result)) {
         $productprice = $row["product_price"];
@@ -58,5 +59,8 @@ if (mysqli_num_rows($result) > 0) {
             </svg>
         </a>
     </div>
-</div>';
+</div>
+</div></div>';
+} else {
+    echo '';
 }
