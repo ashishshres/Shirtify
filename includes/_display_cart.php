@@ -70,6 +70,6 @@ if (mysqli_num_rows($result) > 0) {
     echo '</div></div>';
 } else {
     echo '<div class="w-full">
-    <p class="text-center text-xl font-medium text-gray-800 ">No Products Added</p>
+    <p class="text-center text-xl font-medium text-gray-800 ">No Products Added to Cart</p>
 </div>';
 }
