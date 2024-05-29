@@ -8,6 +8,6 @@ if (isset($_GET["deleteid"])) {
     $sql = "DELETE FROM products WHERE id = $id";
 
     if (mysqli_query($conn, $sql)) {
-        header("location: ./cart.php?success=1");
+        header("location: ./product.php?success=1");
     }
 }
