@@ -49,16 +49,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true) {
 
     <section class="bg-white px-8">
         <div class="max-w-screen-xl 2xl:px-0">
-            <div class="mt-3 md:gap-6 lg:flex lg:items-start xl:gap-8">
-                <div class="w-full flex-none lg:max-w-2xl xl:max-w-4xl">
-                    <div class="space-y-6 mb-4">
-                        <?php include "../includes/_display_cart.php" ?>
-                    </div>
-                </div>
-                <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
-                    <?php include "../includes/_display_total.php" ?>
-                </div>
-            </div>
+            <?php include "../includes/_display_cart.php" ?>
+            <?php include "../includes/_display_total.php" ?>
         </div>
     </section>
     <script src="../scripts/main.js"></script>
