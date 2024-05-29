@@ -12,6 +12,10 @@
 
 ![](./demo/page3.png)
 
+### Product Page
+
+![](./demo/page10.png)
+
 ### Account Page
 
 ![](./demo/page4.png)
