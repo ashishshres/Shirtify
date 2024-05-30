@@ -56,11 +56,11 @@ include "../includes/_signin.php";
                     <form action="./signin.php" method="post" class="flex flex-col gap-4 w-full md:w-full md:max-w-[500px]">
                         <div class="flex flex-col gap-1">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class="bg-zinc-200 p-2 rounded-md">
+                            <input type="email" name="email" id="email" class="bg-zinc-200 p-2 rounded-md" required autocomplete="off">
                         </div>
                         <div class="flex flex-col gap-1">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" class="bg-zinc-200 p-2 rounded-md">
+                            <input type="password" name="password" id="password" class="bg-zinc-200 p-2 rounded-md" required autocomplete="off">
                         </div>
                         <div class="flex gap-1">
                             <input type="checkbox" name="show" id="show" class="bg-zinc-200 p-2 rounded-md" onclick="togglePassword()">
