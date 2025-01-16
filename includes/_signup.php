@@ -15,7 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location: ./signup.php?exists=1");
     } else {
         $hash = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (username, email, password) VALUES('$username','$email', '$hash')";
+        $avatar = "../includes/avatar/default.jpg";
+        $sql = "INSERT INTO users (username, email, password, avatar) VALUES('$username','$email', '$hash', '$avatar')";
         $result = mysqli_query($conn, $sql);
         if ($result) {
             $showAlert = true;
